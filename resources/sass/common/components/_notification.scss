@@ -1,0 +1,284 @@
+/* Common, default styles for the notification box */
+.ns-box {
+	/* display: none; */
+	position: fixed;
+	line-height: 1.4;
+	z-index: 5000;
+	pointer-events: none;
+	color: rgba(250,251,255,0.95);
+	font-size: 1rem;
+	.ns-box-inner {
+		padding: 15px 26px 15px 26px;
+		position: relative;
+		margin-bottom: 5px;
+		.ns-box-message {
+
+		}
+		.ns-box-title {
+			font-size: 1.3rem;
+			padding: 0 0 10px 0;
+		}
+		&.is-primary {
+			background: $primary;
+			.ns-box-message {
+				color: lighten($primary,80);
+			}
+		}
+		&.is-info {
+			background: $info;
+			.ns-box-message {
+				color: lighten($info,80);
+			}
+		}
+		&.is-success {
+			background: $success;
+			.ns-box-message {
+				color: lighten($success,80);
+			}
+		}
+		&.is-warning {
+			background: $warning;
+			.ns-box-message {
+				color: lighten($warning,80);
+			}
+		}
+		&.is-error {
+			background: $danger;
+			.ns-box-message {
+				color: lighten($danger,80);
+			}
+		}
+	}
+	&.ns-show {
+		pointer-events: auto;
+	}
+	a {
+		color: inherit;
+		opacity: 0.7;
+		font-weight: 700;
+		&:hover {
+			opacity: 1;
+		}
+		&:focus {
+			opacity: 1;
+		}
+	}
+	p {
+		margin: 0;
+	}
+	&.ns-show {
+		pointer-events: auto;
+	}
+	&.ns-visible {
+		pointer-events: auto;
+	}
+	.ns-close {
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		right: 4px;
+		top: 4px;
+		overflow: hidden;
+		text-indent: 100%;
+		cursor: pointer;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		&:hover {
+			outline: none;
+		}
+		&:focus {
+			outline: none;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			width: 3px;
+			height: 60%;
+			top: 50%;
+			left: 50%;
+			background: #6e6e6e;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			width: 3px;
+			height: 60%;
+			top: 50%;
+			left: 50%;
+			background: #6e6e6e;
+		}
+		&:hover {
+			&:before {
+				background: #fff;
+			}
+			&:after {
+				background: #fff;
+			}
+		}
+	}
+	&.is-primary {
+		.ns-box-inner {
+			background: $primary;
+			.ns-box-message {
+				color: lighten($primary,40);
+			}
+		}
+	}
+	&.is-info {
+		.ns-box-inner {
+			background: $info;
+			.ns-box-message {
+				color: lighten($info,40);
+			}
+		}
+	}
+	&.is-warning {
+		.ns-box-inner {
+			background: $warning;
+			.ns-box-message {
+				color: lighten($warning,40);
+			}
+		}
+	}
+	&.is-error {
+		.ns-box-inner {
+			background: $danger;
+			.ns-box-message {
+				color: lighten($danger,40);
+			}
+		}
+	}
+	&.is-success {
+		.ns-box-inner {
+			background: $success;
+			.ns-box-message {
+				color: lighten($success,40);
+			}
+		}
+	}
+}
+
+
+.ns-close::before {
+	-webkit-transform: translate(-50%,-50%) rotate(45deg);
+	transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.ns-close::after {
+	-webkit-transform: translate(-50%,-50%) rotate(-45deg);
+	transform: translate(-50%,-50%) rotate(-45deg);
+}
+/* Growl-style notifications */
+.ns-growl {
+	top: 30px;
+	max-width: 300px;
+	&.is-left {
+		left: 30px;
+	}
+	&.is-right {
+		right: 30px;
+	}
+}
+
+.ns-growl p {
+	margin: 0;
+}
+[class^="ns-effect-"].ns-growl.ns-hide,
+[class*=" ns-effect-"].ns-growl.ns-hide {
+	-webkit-animation-direction: reverse;
+	animation-direction: reverse;
+}
+/* Individual effects */
+/* Scale */
+/*
+.ns-effect-scale {
+	background: $primary-color-light;
+	box-shadow: 0 25px 10px -15px rgba(0,0,0,0.05);
+}
+.ns-effect-scale a {
+	color: #1f8a4c;
+}
+*/
+
+.ui-notification.is-primary {
+	.ns-effect-scale {
+		background: $primary-color-light;
+		box-shadow: 0 25px 10px -15px rgba(0,0,0,0.05);
+	}
+	.ns-effect-scale a {
+		color: #1f8a4c;
+	}
+}
+.ui-notification.is-info {
+	.ns-effect-scale {
+		background: $info;
+		box-shadow: 0 25px 10px -15px rgba(0,0,0,0.05);
+	}
+	.ns-effect-scale a {
+		color: lighten($info,40);
+	}
+}
+.ui-notification.is-success {
+	.ns-effect-scale {
+		background: $primary;
+		box-shadow: 0 25px 10px -15px rgba(0,0,0,0.05);
+	}
+	.ns-effect-scale a {
+		color: lighten($primary,40);
+	}
+}
+.ui-notification.is-error {
+	.ns-effect-scale {
+		background: $danger;
+		box-shadow: 0 25px 10px -15px rgba(0,0,0,0.05);
+	}
+	.ns-effect-scale a {
+		color: lighten($danger,40);
+	}
+}
+.ui-notification.is-warning {
+	.ns-effect-scale {
+		background: $warning;
+		box-shadow: 0 25px 10px -15px rgba(0,0,0,0.05);
+	}
+	.ns-effect-scale a {
+		color: lighten($warning,40);
+	}
+}
+
+
+
+
+
+.ns-effect-scale a:hover,
+.ns-effect-scale a:focus {
+	color: #fff;
+}
+
+.ns-effect-scale .ns-close::before,
+.ns-effect-scale .ns-close::after {
+	background: #fff;
+}
+
+.ns-effect-scale .ns-close:hover::before,
+.ns-effect-scale .ns-close:hover::after {
+	background: #fff;
+}
+
+.ns-effect-scale.ns-show,
+.ns-effect-scale.ns-hide {
+	-webkit-animation-name: animScale;
+	animation-name: animScale;
+	-webkit-animation-duration: 0.25s;
+	animation-duration: 0.25s;
+}
+
+@-webkit-keyframes animScale {
+	0% { opacity: 0; -webkit-transform: translate3d(0,40px,0) scale3d(0.1,0.6,1); }
+	100% { opacity: 1; -webkit-transform: translate3d(0,0,0) scale3d(1,1,1); }
+}
+
+@keyframes animScale {
+	0% { opacity: 0; -webkit-transform: translate3d(0,40px,0) scale3d(0.1,0.6,1); transform: translate3d(0,40px,0) scale3d(0.1,0.6,1); }
+	100% { opacity: 1; -webkit-transform: translate3d(0,0,0) scale3d(1,1,1); transform: translate3d(0,0,0) scale3d(1,1,1); }
+}

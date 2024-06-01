@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<ruleset name="StaymenityProject">
+    <config name="installed_paths" value="../../../vendor/slevomat/coding-standard"/>
+    <!--  https://pear.php.net/manual/en/package.php.php-codesniffer.annotated-ruleset.php -->
+    <!--  Использовать стандарты -->
+    <rule ref="PSR1"/>
+    <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
+        <exclude-pattern>./database/*</exclude-pattern>
+    </rule>
+
+    <rule ref="PSR2"/>
+    <rule ref="PSR12"/>
+    <rule ref="PSR12.Properties.ConstantVisibility.NotFound">
+        <exclude-pattern>./*</exclude-pattern>
+    </rule>
+
+    <!-- Проверять declare(strict_types=1); -->
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+        <properties>
+            <property name="newlinesCountBetweenOpenTagAndDeclare" value="2"/>
+            <property name="spacesCountAroundEqualsSign" value="0"/>
+        </properties>
+        <exclude-pattern>./config/*</exclude-pattern>
+    </rule>
+
+    <!-- Игнорировать последний символ строки -->
+    <rule ref="Generic.Files.LineEndings">
+        <exclude name="Generic.Files.LineEndings"/>
+    </rule>
+
+    <!-- Запретить не строгое сравнение -->
+    <rule ref="SlevomatCodingStandard.Operators.DisallowEqualOperators"/>
+
+    <rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure"/>
+    <!-- Запретить передавать неиспользуемые аргументы в функции -->
+<!--    <rule ref="SlevomatCodingStandard.Functions.UnusedParameter"/>-->
+    <!-- Запретить трейтам иметь в имени Trait -->
+<!--    <rule ref="SlevomatCodingStandard.Classes.SuperfluousTraitNaming"/>-->
+
+    <!-- Сортировка компонентов класса -->
+<!--    <rule ref="SlevomatCodingStandard.Classes.ClassStructure">-->
+<!--        <properties>-->
+<!--            <property name="groups" type="array">-->
+<!--                <element value="uses"/>-->
+
+<!--                &lt;!&ndash; Public constants are first but you don't care about the order of protected or private constants &ndash;&gt;-->
+<!--                <element value="public constants"/>-->
+<!--                <element value="constants"/>-->
+
+<!--                &lt;!&ndash; You don't care about the order among the properties. The same can be done with "properties" shortcut &ndash;&gt;-->
+<!--                <element value="public properties, protected properties, private properties, public static properties, protected static properties, private static properties"/>-->
+
+<!--                &lt;!&ndash; Constructor is first, then all public methods, then protected/private methods and magic methods are last &ndash;&gt;-->
+<!--                <element value="constructor"/>-->
+<!--                <element value="all public methods"/>-->
+<!--                <element value="methods"/>-->
+<!--                <element value="magic methods"/>-->
+<!--            </property>-->
+<!--        </properties>-->
+<!--    </rule>-->
+
+    <!-- Игнорировать максимальное количество символов в строке для директорий  -->
+    <rule ref="Generic.Files.LineLength">
+        <exclude-pattern>./config/*</exclude-pattern>
+        <exclude-pattern>./routes/*</exclude-pattern>
+        <exclude-pattern>./database/migrations/*</exclude-pattern>
+    </rule>
+    <!-- Ban some functions -->
+    <rule ref="Generic.PHP.ForbiddenFunctions">
+        <properties>
+            <property name="forbiddenFunctions" type="array">
+                <element key="dd" value="null"/>
+            </property>
+        </properties>
+    </rule>
+
+    <!--  Исключить директорию от всех проверок  -->
+    <exclude-pattern>./app/Http/Docs/*</exclude-pattern>
+    <exclude-pattern>*.blade.php</exclude-pattern>
+</ruleset>

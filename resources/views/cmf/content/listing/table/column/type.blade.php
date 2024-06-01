@@ -1,0 +1,1 @@
+{{ $oItem->type->title ?? '-' }}

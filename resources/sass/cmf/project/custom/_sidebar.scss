@@ -1,0 +1,20 @@
+
+
+.sidebar-name {
+  width: 190px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar .nav-link.is-attraction {
+    width: 230px;
+}
+.sidebar .nav-item.open {
+    overflow: hidden;
+}

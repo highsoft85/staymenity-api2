@@ -1,0 +1,538 @@
+
+
+//colors
+$color_curious_blue_approx: #20a8d8;
+$white: #fff;
+$color_curious_blue_50_approx: rgba(32, 168, 216, .5);
+$color_ghost_approx: #c8ced3;
+$color_shark_approx: #23282c;
+$color_ghost_50_approx: rgba(200, 206, 211, .5);
+$color_emerald_approx: #4dbd74;
+$color_emerald_50_approx: rgba(77, 189, 116, .5);
+$color_viking_approx: #63c2de;
+$color_viking_50_approx: rgba(99, 194, 222, .5);
+$color_amber_approx: #ffc107;
+$color_amber_50_approx: rgba(255, 193, 7, .5);
+$color_bittersweet_approx: #f86c6b;
+$color_bittersweet_50_approx: rgba(248, 108, 107, .5);
+$color_porcelain_approx: #f0f3f5;
+$color_porcelain_50_approx: rgba(240, 243, 245, .5);
+$color_outer_space_approx: #2f353a;
+$color_outer_space_50_approx: rgba(47, 53, 58, .5);
+
+//@extend-elements
+//original selectors
+//.btn-ghost-primary.disabled, .btn-ghost-primary:disabled
+%extend_1 {
+  color: $color_curious_blue_approx;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+//original selectors
+//.btn-ghost-primary:not(:disabled):not(.disabled):active, .btn-ghost-primary:not(:disabled):not(.disabled).active, .show >.btn-ghost-primary.dropdown-toggle
+%extend_2 {
+  color: $white;
+  background-color: $color_curious_blue_approx;
+  border-color: $color_curious_blue_approx;
+}
+
+//original selectors
+//.btn-ghost-secondary.disabled, .btn-ghost-secondary:disabled
+%extend_3 {
+  color: $color_ghost_approx;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+//original selectors
+//.btn-ghost-secondary:not(:disabled):not(.disabled):active, .btn-ghost-secondary:not(:disabled):not(.disabled).active, .show >.btn-ghost-secondary.dropdown-toggle
+%extend_4 {
+  color: $color_shark_approx;
+  background-color: $color_ghost_approx;
+  border-color: $color_ghost_approx;
+}
+
+//original selectors
+//.btn-ghost-success.disabled, .btn-ghost-success:disabled
+%extend_5 {
+  color: $color_emerald_approx;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+//original selectors
+//.btn-ghost-success:not(:disabled):not(.disabled):active, .btn-ghost-success:not(:disabled):not(.disabled).active, .show >.btn-ghost-success.dropdown-toggle
+%extend_6 {
+  color: $white;
+  background-color: $color_emerald_approx;
+  border-color: $color_emerald_approx;
+}
+
+//original selectors
+//.btn-ghost-info.disabled, .btn-ghost-info:disabled
+%extend_7 {
+  color: $color_viking_approx;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+//original selectors
+//.btn-ghost-info:not(:disabled):not(.disabled):active, .btn-ghost-info:not(:disabled):not(.disabled).active, .show >.btn-ghost-info.dropdown-toggle
+%extend_8 {
+  color: $color_shark_approx;
+  background-color: $color_viking_approx;
+  border-color: $color_viking_approx;
+}
+
+//original selectors
+//.btn-ghost-warning.disabled, .btn-ghost-warning:disabled
+%extend_9 {
+  color: $color_amber_approx;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+//original selectors
+//.btn-ghost-warning:not(:disabled):not(.disabled):active, .btn-ghost-warning:not(:disabled):not(.disabled).active, .show >.btn-ghost-warning.dropdown-toggle
+%extend_10 {
+  color: $color_shark_approx;
+  background-color: $color_amber_approx;
+  border-color: $color_amber_approx;
+}
+
+//original selectors
+//.btn-ghost-danger.disabled, .btn-ghost-danger:disabled
+%extend_11 {
+  color: $color_bittersweet_approx;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+//original selectors
+//.btn-ghost-danger:not(:disabled):not(.disabled):active, .btn-ghost-danger:not(:disabled):not(.disabled).active, .show >.btn-ghost-danger.dropdown-toggle
+%extend_12 {
+  color: $white;
+  background-color: $color_bittersweet_approx;
+  border-color: $color_bittersweet_approx;
+}
+
+//original selectors
+//.btn-ghost-light.disabled, .btn-ghost-light:disabled
+%extend_13 {
+  color: $color_porcelain_approx;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+//original selectors
+//.btn-ghost-light:not(:disabled):not(.disabled):active, .btn-ghost-light:not(:disabled):not(.disabled).active, .show >.btn-ghost-light.dropdown-toggle
+%extend_14 {
+  color: $color_shark_approx;
+  background-color: $color_porcelain_approx;
+  border-color: $color_porcelain_approx;
+}
+
+//original selectors
+//.btn-ghost-dark.disabled, .btn-ghost-dark:disabled
+%extend_15 {
+  color: $color_outer_space_approx;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+//original selectors
+//.btn-ghost-dark:not(:disabled):not(.disabled):active, .btn-ghost-dark:not(:disabled):not(.disabled).active, .show >.btn-ghost-dark.dropdown-toggle
+%extend_16 {
+  color: $white;
+  background-color: $color_outer_space_approx;
+  border-color: $color_outer_space_approx;
+}
+
+
+.btn-ghost-primary {
+  color: $color_curious_blue_approx;
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+  &:hover {
+    color: $white;
+    background-color: $color_curious_blue_approx;
+    border-color: $color_curious_blue_approx;
+  }
+  &:focus {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 .2rem $color_curious_blue_50_approx;
+  }
+  &.focus {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 .2rem $color_curious_blue_50_approx;
+  }
+  &.disabled {
+    @extend %extend_1;
+  }
+  &:disabled {
+    @extend %extend_1;
+  }
+  &:not(:disabled):not(.disabled) {
+    &:active {
+      @extend %extend_2;
+      &:focus {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 0 .2rem $color_curious_blue_50_approx;
+      }
+    }
+    &.active {
+      @extend %extend_2;
+      &:focus {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 0 .2rem $color_curious_blue_50_approx;
+      }
+    }
+  }
+}
+.btn-ghost-secondary {
+  color: $color_ghost_approx;
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+  &:hover {
+    color: $color_shark_approx;
+    background-color: $color_ghost_approx;
+    border-color: $color_ghost_approx;
+  }
+  &:focus {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 .2rem $color_ghost_50_approx;
+  }
+  &.focus {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 .2rem $color_ghost_50_approx;
+  }
+  &.disabled {
+    @extend %extend_3;
+  }
+  &:disabled {
+    @extend %extend_3;
+  }
+  &:not(:disabled):not(.disabled) {
+    &:active {
+      @extend %extend_4;
+      &:focus {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 0 .2rem $color_ghost_50_approx;
+      }
+    }
+    &.active {
+      @extend %extend_4;
+      &:focus {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 0 .2rem $color_ghost_50_approx;
+      }
+    }
+  }
+}
+.btn-ghost-success {
+  color: $color_emerald_approx;
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+  &:hover {
+    color: $white;
+    background-color: $color_emerald_approx;
+    border-color: $color_emerald_approx;
+  }
+  &:focus {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 .2rem $color_emerald_50_approx;
+  }
+  &.focus {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 .2rem $color_emerald_50_approx;
+  }
+  &.disabled {
+    @extend %extend_5;
+  }
+  &:disabled {
+    @extend %extend_5;
+  }
+  &:not(:disabled):not(.disabled) {
+    &:active {
+      @extend %extend_6;
+      &:focus {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 0 .2rem $color_emerald_50_approx;
+      }
+    }
+    &.active {
+      @extend %extend_6;
+      &:focus {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 0 .2rem $color_emerald_50_approx;
+      }
+    }
+  }
+}
+.btn-ghost-info {
+  color: $color_viking_approx;
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+  &:hover {
+    color: $color_shark_approx;
+    background-color: $color_viking_approx;
+    border-color: $color_viking_approx;
+  }
+  &:focus {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 .2rem $color_viking_50_approx;
+  }
+  &.focus {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 .2rem $color_viking_50_approx;
+  }
+  &.disabled {
+    @extend %extend_7;
+  }
+  &:disabled {
+    @extend %extend_7;
+  }
+  &:not(:disabled):not(.disabled) {
+    &:active {
+      @extend %extend_8;
+      &:focus {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 0 .2rem $color_viking_50_approx;
+      }
+    }
+    &.active {
+      @extend %extend_8;
+      &:focus {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 0 .2rem $color_viking_50_approx;
+      }
+    }
+  }
+}
+.btn-ghost-warning {
+  color: $color_amber_approx;
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+  &:hover {
+    color: $color_shark_approx;
+    background-color: $color_amber_approx;
+    border-color: $color_amber_approx;
+  }
+  &:focus {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 .2rem $color_amber_50_approx;
+  }
+  &.focus {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 .2rem $color_amber_50_approx;
+  }
+  &.disabled {
+    @extend %extend_9;
+  }
+  &:disabled {
+    @extend %extend_9;
+  }
+  &:not(:disabled):not(.disabled) {
+    &:active {
+      @extend %extend_10;
+      &:focus {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 0 .2rem $color_amber_50_approx;
+      }
+    }
+    &.active {
+      @extend %extend_10;
+      &:focus {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 0 .2rem $color_amber_50_approx;
+      }
+    }
+  }
+}
+.btn-ghost-danger {
+  color: $color_bittersweet_approx;
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+  &:hover {
+    color: $white;
+    background-color: $color_bittersweet_approx;
+    border-color: $color_bittersweet_approx;
+  }
+  &:focus {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 .2rem $color_bittersweet_50_approx;
+  }
+  &.focus {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 .2rem $color_bittersweet_50_approx;
+  }
+  &.disabled {
+    @extend %extend_11;
+  }
+  &:disabled {
+    @extend %extend_11;
+  }
+  &:not(:disabled):not(.disabled) {
+    &:active {
+      @extend %extend_12;
+      &:focus {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 0 .2rem $color_bittersweet_50_approx;
+      }
+    }
+    &.active {
+      @extend %extend_12;
+      &:focus {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 0 .2rem $color_bittersweet_50_approx;
+      }
+    }
+  }
+}
+.btn-ghost-light {
+  color: $color_porcelain_approx;
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+  &:hover {
+    color: $color_shark_approx;
+    background-color: $color_porcelain_approx;
+    border-color: $color_porcelain_approx;
+  }
+  &:focus {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 .2rem $color_porcelain_50_approx;
+  }
+  &.focus {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 .2rem $color_porcelain_50_approx;
+  }
+  &.disabled {
+    @extend %extend_13;
+  }
+  &:disabled {
+    @extend %extend_13;
+  }
+  &:not(:disabled):not(.disabled) {
+    &:active {
+      @extend %extend_14;
+      &:focus {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 0 .2rem $color_porcelain_50_approx;
+      }
+    }
+    &.active {
+      @extend %extend_14;
+      &:focus {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 0 .2rem $color_porcelain_50_approx;
+      }
+    }
+  }
+}
+.btn-ghost-dark {
+  color: $color_outer_space_approx;
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+  &:hover {
+    color: $white;
+    background-color: $color_outer_space_approx;
+    border-color: $color_outer_space_approx;
+  }
+  &:focus {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 .2rem $color_outer_space_50_approx;
+  }
+  &.focus {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 .2rem $color_outer_space_50_approx;
+  }
+  &.disabled {
+    @extend %extend_15;
+  }
+  &:disabled {
+    @extend %extend_15;
+  }
+  &:not(:disabled):not(.disabled) {
+    &:active {
+      @extend %extend_16;
+      &:focus {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 0 .2rem $color_outer_space_50_approx;
+      }
+    }
+    &.active {
+      @extend %extend_16;
+      &:focus {
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 0 0 .2rem $color_outer_space_50_approx;
+      }
+    }
+  }
+}
+.show > {
+  .btn-ghost-primary.dropdown-toggle {
+    @extend %extend_2;
+    &:focus {
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 0 0 .2rem $color_curious_blue_50_approx;
+    }
+  }
+  .btn-ghost-secondary.dropdown-toggle {
+    @extend %extend_4;
+    &:focus {
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 0 0 .2rem $color_ghost_50_approx;
+    }
+  }
+  .btn-ghost-success.dropdown-toggle {
+    @extend %extend_6;
+    &:focus {
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 0 0 .2rem $color_emerald_50_approx;
+    }
+  }
+  .btn-ghost-info.dropdown-toggle {
+    @extend %extend_8;
+    &:focus {
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 0 0 .2rem $color_viking_50_approx;
+    }
+  }
+  .btn-ghost-warning.dropdown-toggle {
+    @extend %extend_10;
+    &:focus {
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 0 0 .2rem $color_amber_50_approx;
+    }
+  }
+  .btn-ghost-danger.dropdown-toggle {
+    @extend %extend_12;
+    &:focus {
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 0 0 .2rem $color_bittersweet_50_approx;
+    }
+  }
+  .btn-ghost-light.dropdown-toggle {
+    @extend %extend_14;
+    &:focus {
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 0 0 .2rem $color_porcelain_50_approx;
+    }
+  }
+  .btn-ghost-dark.dropdown-toggle {
+    @extend %extend_16;
+    &:focus {
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 0 0 .2rem $color_outer_space_50_approx;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+
+
+.hidden {
+  display: none;
+}
+
+.form-control.is-danger {
+  border-color: $brand-danger;
+}
+
+.btn.btn-link.is-disabled {
+  opacity: .3;
+}
+
+.border-success {
+  border-color: $brand-success !important;
+}
+
+.border-danger {
+  border-color: $brand-danger !important;
+}
+
+.shadow-success {
+  box-shadow: 0 0 5px $brand-success;
+  border-color: transparent !important;
+}
+
+.shadow-danger {
+  box-shadow: 0 0 5px $brand-danger;
+  border-color: transparent !important;
+}
+
+.a[role="button"] {
+  text-decoration: none;
+}

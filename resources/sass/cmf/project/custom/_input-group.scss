@@ -1,0 +1,33 @@
+.input-group-prepend {
+    padding: 5px 13px;
+
+    &.bg-default {
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-right: none;
+
+        .fa {
+            color: #495057;
+        }
+    }
+}
+
+
+.input-form-collapse {
+    .__button {
+        a {
+            color: $gray-dark;
+
+            &:hover {
+                color: $gray;
+            }
+
+            &:hover, &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .__form {
+        //margin-top: -1rem;
+    }
+}

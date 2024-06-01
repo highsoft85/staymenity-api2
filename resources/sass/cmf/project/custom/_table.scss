@@ -1,0 +1,122 @@
+.table.__with-edit-delete {
+    th:nth-last-child(1),
+    th:nth-last-child(2),
+    td:nth-last-child(1),
+    td:nth-last-child(2) {
+        width: 50px;
+        text-align: center;
+
+        a {
+            height: 29px;
+        }
+    }
+}
+
+
+
+.avatar-combine {
+    display: block;
+    position: relative;
+    height: 36px;
+    width: 61px;
+    .avatar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        &:nth-child(1) {
+            left: 0;
+            z-index: 14;
+        }
+        &:nth-child(2) {
+            left: 10px;
+            z-index: 13;
+        }
+        &:nth-child(3) {
+            left: 20px;
+            z-index: 12;
+        }
+        &:nth-child(4) {
+            left: 30px;
+            z-index: 11;
+        }
+        &:nth-child(5) {
+            left: 40px;
+            z-index: 10;
+        }
+        &:nth-child(6) {
+            left: 50px;
+            z-index: 10;
+        }
+        &:hover {
+            z-index: 100;
+        }
+    }
+}
+.text-black {
+    color: #2a2c36 !important;
+}
+
+.form-control-focus {
+    border: 1px solid transparent;
+    background: transparent;
+    margin-left: -0.5rem;
+}
+
+.nav.justify-content-end {
+    .nav-link:not(.active) {
+        color: #55595c;
+    }
+}
+
+.bootstrap-select {
+    width: 100%;
+}
+
+.btn-multiselect {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+
+    &:focus {
+        outline: none !important;
+    }
+}
+
+.bootstrap-select.btn-group .dropdown-menu li {
+
+}
+
+.bootstrap-select.btn-group .dropdown-menu li a {
+    color: #55595c;
+    padding: 5px;
+    width: 100%;
+    display: block;
+}
+
+.filter-option {
+    color: #55595c;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li.selected {
+    font-weight: bold;
+}
+
+.table thead th {
+    border-bottom: none;
+}
+
+.table .text-opacity {
+    opacity: .5;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table-borderless {
+    th,
+    td,
+    thead th,
+    tbody + tbody {
+        border: 0;
+    }
+}

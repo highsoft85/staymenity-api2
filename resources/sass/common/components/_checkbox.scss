@@ -1,0 +1,92 @@
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+// WIDTH
+$tcon-width: 6rem;
+//$tcon-active-background: $primary;
+$tcon-active-background: #4fbe79;
+$tcon-default-background: #d3c1d1;
+
+
+.tcon-checkbox {
+  height: 2rem;
+  position: relative;
+  margin: auto 10px;
+  width: $tcon-width;
+  input[type=checkbox] {
+    opacity: 0;
+    &:focus ~ label {
+      box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.4), 1px 1px 1px rgba(255, 255, 255, 0.6);
+      background: $tcon-default-background;
+    }
+    &:checked ~ label {
+      background: $tcon-active-background;
+    }
+    &:checked ~ label:after {
+      left: $tcon-width - 2rem;
+    }
+  }
+  label {
+    border-radius: 6rem;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.27), 1px 1px 1px rgba(255, 255, 255, 0.71);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background 150ms ease-in-out;
+    text-indent: -9999em;
+    background: #E8DFE7;
+    &:hover {
+      cursor: pointer;
+    }
+    &:after {
+      border-radius: 6rem;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.42);
+      content: "";
+      cursor: pointer;
+      display: block;
+      height: 1.5rem;
+      position: absolute;
+      top: 0.25rem;
+      left: 0.5rem;
+      width: 1.5rem;
+      transition: left 150ms ease-in-out;
+      z-index: 1;
+      background: #FFFFFD;
+    }
+  }
+}
+
+.pcon-checkbox {
+  input[type=checkbox] {
+    display:none;
+    &:checked + label:after {
+      content: "\f00c";
+      @include animation(tick .2s ease-in-out);
+    }
+    &:disabled + label:after {
+      content: "\f00d";
+    }
+  }
+  label {
+    &:after {
+      content: "\f096";
+      font-family: FontAwesome;
+      font-size: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      width: 1em;
+      display: inline-block;
+      margin-right: 5px;
+      @include transition(all .1s ease-in-out);
+    }
+  }
+}
+
+@include keyframes(tick) {
+  0% { @include scale(0); }
+  90% { @include scale(1.5); }
+  100% { @include scale(1); }
+}

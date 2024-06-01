@@ -1,0 +1,41 @@
+.scrtabs-tab-container {
+    height: 37px;
+    //display: flex;
+    //justify-content: space-between;
+}
+.scrtabs-tab-scroll-arrow {
+    height: 37px;
+    padding-top: 0;
+    width: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #fff;
+    &:hover {
+        background-color: #adadad;
+        border-color: #adadad;
+    }
+}
+.scrtabs-tab-scroll-arrow-right {
+    //width: 33px;
+}
+//.scrtabs-tab-scroll-arrow-left {
+//    border-left: none;
+//    border-right: none;
+//}
+//.scrtabs-tab-scroll-arrow-rightt {
+//    border-left: none;
+//    border-right: none;
+//}
+.nav-tabs-scrolling-container {
+    .nav-tabs .nav-item {
+        height: 37px;
+        //overflow: hidden;
+    }
+    .tab-content {
+        visibility: hidden;
+    }
+}
+

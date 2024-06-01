@@ -1,0 +1,90 @@
+/*
+	@include animation(spin .7s infinite linear);
+*/
+@include keyframes(spin) {
+  0% { @include rotate(0);}
+  100% { @include rotate(360);}
+}
+/*
+	@include animation(temporaryBorder .7s infinite linear);
+*/
+@include keyframes(temporaryBorder) {
+  from {  }
+  to { border-color: #dbdbdb; }
+}
+/*
+	@include animation(load 5s infinite linear);
+*/
+@include keyframes(load) {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+/*
+  @include animation(from-left 1s);
+*/
+@include keyframes(from-left) {
+  0% { 
+    margin-left: 100%; 
+  }
+  100% { 
+    margin-left: 0%; 
+  }
+}
+
+/*
+  @include animation(opacity 1s);
+*/
+@include keyframes(opacity) {
+  0% { @include opacity(0); }
+  100% { @include opacity(100); }
+}
+/*
+  @include animation(scale 1s);
+*/
+@include keyframes(scale) {
+  0% { @include scale(0); }
+  80% { @include scale(120); }
+  100% { @include scale(100); }
+}
+/*
+  DIALOGS
+*/
+/*
+  @include animation(anim-open 1s);
+*/
+@include keyframes(anim-open) {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+/*
+  @include animation(anim-close 1s);
+*/
+@include keyframes(anim-close) {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.9, 0.9, 1);
+    transform: scale3d(0.9, 0.9, 1);
+  }
+}
+/*
+  @include animation(anim-closed 1s);
+*/
+@include keyframes(anim-closed) {
+  0% {
+    margin-left: -100%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}

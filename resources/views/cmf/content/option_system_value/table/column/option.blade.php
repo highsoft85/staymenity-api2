@@ -1,0 +1,1 @@
+{{ $oItem->option->title ?? '-' }}

@@ -1,0 +1,102 @@
+.section#Desta {
+  //background: #1e1b2c;
+  //color: #f39468;
+  min-height: 500px;
+}
+.section--nav {
+  position: relative;
+  overflow: hidden;
+  -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-align-items: center;
+  align-items: center;
+  .title {
+    //color: #f39468;
+  }
+}
+
+.nav--desta {
+  .nav__item {
+    width: 5em;
+    height: 3.5em;
+    line-height: 1;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0;
+    color: currentColor;
+    border: 0;
+    background: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    outline: none;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+  .nav__icon {
+    position: absolute;
+    top: 1em;
+    left: 0;
+    width: 1.5em;
+    height: 1.5em;
+    @include rotate3d(0,0,1,-90deg);
+
+    @include transition(transform 0.5s, fill 0.5s);
+
+    -webkit-transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+    transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+    fill: currentColor;
+  }
+  .nav__item-title {
+    line-height: 2;
+    display: block;
+    margin: 0 0 0 2.25em;
+    white-space: nowrap;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @include opacity(50);
+    color: #666;
+    //@include translate3d(-10px,-10px,0);
+    @include translate3d(0,0,0);
+    @include transition(transform 0.5s, opacity 0.5s);
+    -webkit-transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+    transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+  }
+  .nav__item--current .nav__item-title {
+    @include opacity(100);
+    @include translate3d(0,0,0);
+    &:first-letter {
+      color: $primary;
+    }
+  }
+  .nav__item--current .nav__icon {
+    @include rotate3d(0, 0, 1, 0deg);
+    fill: $primary;
+  }
+}
+
+.nav--desta .nav__item:not(.nav__item--current):focus .nav__icon,
+.nav--desta .nav__item:not(.nav__item--current):hover .nav__icon {
+  fill: $primary;
+}
+
+.nav-desta {
+  //background: #1e1b2c;
+  box-shadow: 0 5px 10px -4px rgba(0,0,0,0.6) !important;
+  .dropdown-link {
+    .dropdown-menu {
+      min-width: 100%;
+      white-space: nowrap;
+      a {
+        //background: #1e1b2c;
+      }
+    }
+    li {
+      a {
+        //background: #1e1b2c;
+      }
+    }
+  }
+}

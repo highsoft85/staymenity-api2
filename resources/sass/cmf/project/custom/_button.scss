@@ -1,0 +1,38 @@
+
+
+.btn[data-toggle="collapse"] {
+  &:focus {
+    box-shadow: none;
+  }
+}
+.btn-light {
+    color: #151b1e;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+.btn-light:hover {
+    color: #151b1e;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}
+.__is-full {
+    width: 100%;
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #2a2c36;
+    border-color: #2a2c36;
+}
+.btn-dark:hover {
+    color: #fff;
+    background-color: #191a20;
+    border-color: #141519;
+}
+.btn-link:focus {
+    outline: none;
+    box-shadow: none;
+}
+.btn-xs {
+    padding: 0.1rem 0.25rem;
+}

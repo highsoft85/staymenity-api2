@@ -1,0 +1,35 @@
+
+@import './custom/_button';
+@import './custom/_pagination';
+@import './custom/_input-group';
+@import './custom/_list-group';
+@import './custom/_checkbox';
+@import './custom/_table';
+@import './custom/table/column';
+@import './custom/_popover';
+@import './custom/_modal';
+@import './custom/_summernote';
+@import './custom/_multiselect';
+@import './custom/_markdown';
+@import './custom/_sidebar';
+@import './custom/_huebee';
+@import './custom/_dialog';
+
+@import './custom/_font-awesome';
+@import './custom/_switch';
+@import './custom/_alert';
+@import './custom/_textarea';
+
+
+.avatar {
+    &.border-default {
+        .img-avatar {
+            //border: 2px solid ;
+        }
+    }
+    &.border-success {
+        .img-avatar {
+            border: 2px solid $brand-success;
+        }
+    }
+}

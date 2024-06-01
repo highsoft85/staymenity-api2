@@ -1,0 +1,37 @@
+.square-spin {
+  &.is-primary {
+    & > div {
+      background-color: $primary;
+    }
+  }
+  &.is-info {
+    & > div {
+      background-color: $info;
+    }
+  }
+  &.is-danger {
+    & > div {
+      background-color: $danger;
+    }
+  }
+  &.is-warning {
+    & > div {
+      background-color: $warning;
+    }
+  }
+  &.is-success {
+    & > div {
+      background-color: $success;
+    }
+  }
+  &.is-light {
+    & > div {
+      background-color: $light;
+    }
+  }
+  &.is-dark {
+    & > div {
+      background-color: $dark;
+    }
+  }
+}

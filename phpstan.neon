@@ -1,0 +1,19 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+    paths:
+        - app
+    level: 5
+    inferPrivatePropertyTypeFromConstructor: true
+    ignoreErrors:
+        - '#Call to an undefined static method Nexmo\\Laravel\\Facade\\Nexmo::message\(\).#'
+        - '#Parameter \#1 \$model of method App\\Models\\Listing::averageRating\(\) expects Illuminate\\Database\\Eloquent\\Model\|null, string given.#'
+        - '#Parameter \#1 \$model of method App\\Models\\Listing::raters\(\) expects Illuminate\\Database\\Eloquent\\Model\|null, string given.#'
+        - '#Parameter \#1 \$model of method App\\Models\\User::averageRating\(\) expects Illuminate\\Database\\Eloquent\\Model\|null, string given.#'
+        - '#Parameter \#1 \$model of method App\\Models\\User::raters\(\) expects Illuminate\\Database\\Eloquent\\Model\|null, string given.#'
+        - '#Result of function abort \(void\) is used.#'
+        - '#Access to an undefined property Stripe\\StripeObject::\$amount.#'
+        # - '#Call to an undefined method Dingo\\Api\\Http\\Response\\Factory::array\(\).#'
+        # - '#Offset "config" does not exist on Illuminate\\Contracts\\Foundation\\Application.#'
+        # - "#Offset 'Butschster/\/Head…' does not exist on Illuminate\\Contracts\\Foundation\\Application.#"

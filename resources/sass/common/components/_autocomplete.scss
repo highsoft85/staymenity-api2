@@ -1,0 +1,78 @@
+#search {
+    position: relative;
+}
+
+.angucomplete-holder {
+    position: relative;
+}
+
+.angucomplete-dropdown {
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    width: 100%;
+    padding: 6px;
+    cursor: pointer;
+    z-index: 1000;
+    position: absolute;
+    /*top: 32px;
+    left: 0px;
+    */
+    margin-top: 2px;
+    background-color: #ffffff;
+}
+
+.angucomplete-searching {
+    color: #acacac;
+    font-size: 14px;
+}
+
+.angucomplete-description {
+    font-size: 14px;
+}
+
+.angucomplete-row {
+    padding: 5px;
+    color: #000000;
+}
+
+.angucomplete-selected-row, .angucomplete-row:hover {
+    //background-color: #ee6e73;
+    //background-color: #fdeaeb;
+    background-color: #ececec;
+    //color: #ffffff;
+}
+
+.angucomplete-image-holder {
+    padding-top: 2px;
+    float: left;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.angucomplete-image {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    border: 1px solid #ececec;
+}
+
+.angucomplete-image-default {
+    /* Add your own default image here
+     background-image: url('/assets/default.png');
+    */
+    background-position: center;
+    background-size: contain;
+    height: 34px;
+    width: 34px;
+}
+
+.search-button {
+  padding-right: 10px;
+  padding-left: 10px;
+  right: 10px;
+  position: absolute;
+  top: 5px;
+  &:focus {
+    background-color: #fff;
+  }
+}

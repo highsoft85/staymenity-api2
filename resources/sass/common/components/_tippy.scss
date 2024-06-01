@@ -1,0 +1,52 @@
+
+
+.tippy-tooltip.light-theme {
+  background-color: #fff;
+  color: #212529;
+  box-shadow: 0 0 5px #ccc;
+  //width: 300px;
+  padding: 10px 20px;
+
+  .tippy-content {
+    color: #212529;
+
+    .title {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .description {
+
+    }
+  }
+}
+
+.tippy-tooltip.info-theme {
+  background-color: #fff;
+  color: #212529;
+  box-shadow: 0 0 5px #ccc;
+  padding: 10px 20px;
+
+  .tippy-content {
+    color: #212529;
+
+    .title {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .description {
+
+    }
+  }
+}
+
+.text-default {
+  color: #626262 !important;
+
+  &:hover {
+    color: #626262;
+  }
+}

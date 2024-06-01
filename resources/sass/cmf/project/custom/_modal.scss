@@ -1,0 +1,229 @@
+
+.dialog {
+    .modal-content.edit-form {
+        margin-right: -650px;
+        transition: 1s;
+    }
+}
+
+.dialog.dialog--open.dialog-ajax {
+    z-index: 10;
+
+    .modal-content.edit-form {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: calc(100% - 55px);
+        margin-top: 55px;
+        width: 600px;
+        margin-right: 1px;
+        transition: 1s;
+    }
+}
+
+.modal.show.edit-form .modal-dialog,
+.modal.fade.edit-form .modal-dialog {
+    transform: none;
+    //position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    margin-top: 0px;
+    max-width: 780px;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.modal.edit-form.is-support {
+    .modal-dialog {
+        max-width: 580px;
+        min-width: 580px;
+        //box-shadow: 0 0 10px 1px #ccc;
+    }
+
+    margin-right: -18px !important;
+}
+.is-right-bar.is-support {
+    overflow: visible;
+}
+.is-right-bar.is-support .modal-dialog {
+    box-shadow: 0 0 5px #ccc;
+}
+
+.modal-content {
+    border: 1px solid rgba(209, 212, 215, 0);
+    border-right: 0;
+}
+
+.modal.edit-form.show .modal-dialog {
+    right: 0 !important;
+}
+
+.modal.edit-form .modal-dialog {
+    //margin-right: -615px !important;
+    right: -615px !important;
+    transform: none;
+    transition: right 190ms ease-out;
+}
+
+.modal.edit-form .modal-content {
+    position: relative;
+    height: 100%;
+}
+
+.modal-backdrop {
+    z-index: 10;
+
+    &.is-confirm {
+        z-index: 1051;
+    }
+}
+
+.modal#pages-dialogs-confirm {
+    z-index: 1052;
+
+    .modal-content {
+        .dialog__loading {
+            height: 50px !important;
+        }
+    }
+}
+
+.modal#pages-dialogs-modal {
+    z-index: 1052;
+
+    .modal-content {
+        background-color: inherit;
+        align-items: center;
+
+        form {
+            background-color: #fff;
+        }
+
+        .dialog__loading {
+            height: 50px !important;
+        }
+    }
+}
+
+.edit-form::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+
+.edit-form::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: rgba(163, 167, 164, 1);
+    //-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.edit-form::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(163, 167, 164, 0.5);
+}
+
+.edit-form ::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+}
+
+.edit-form ::-webkit-scrollbar-track {
+    background-color: #eee;
+    //border: 1px solid #d1d4d7;
+}
+
+.edit-form ::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: rgba(163, 167, 164, 1);
+    //-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.edit-form ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(163, 167, 164, 0.5);
+}
+
+.edit-form .modal-header {
+    display: block;
+    min-height: 75px;
+}
+
+.edit-form .modal-header .modal-title {
+    width: calc(100% - 20px);
+    display: inline-block;
+}
+
+.edit-form .modal-header .close {
+    display: inline-block;
+}
+
+.edit-form .modal-footer {
+    display: block;
+    text-align: right;
+}
+
+body.modal-open {
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-right: 0 !important;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog:not(.edit-form) {
+        max-width: 780px;
+        margin: 30px auto;
+    }
+}
+
+.modal.is-right-bar {
+    .modal-dialog {
+        background-color: #fff;
+        min-width: 778px;
+        @media only screen and (min-width: 992px) and (max-width: 1422px) {
+            width: 70%;
+        }
+        @media (max-width: 992px) {
+            width: 100%;
+            min-width: inherit;
+        }
+
+        .is-support {
+            max-width: 578px;
+        }
+
+        @media (max-width: 992px) {
+            width: 100%;
+            min-width: inherit;
+        }
+    }
+}
+
+.modal.is-right-bar {
+    .modal-dialog {
+        @media (max-width: 575px) {
+            margin: 0;
+        }
+    }
+}
+
+.modal.is-left-bar {
+    .modal-dialog {
+        background-color: #fff;
+        width: 50%;
+        @media only screen and (min-width: 992px) and (max-width: 1422px) {
+            width: 70%;
+        }
+        @media (max-width: 992px) {
+            width: 100%;
+        }
+    }
+}
+
+.modal-backdrop {
+
+}
+
+.nav-tabs.is-scrollable {
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: -2px;
+}

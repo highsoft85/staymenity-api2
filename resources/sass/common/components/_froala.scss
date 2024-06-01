@@ -1,0 +1,15 @@
+@import './../../../../node_modules/froala-editor/css/froala_editor.pkgd.min.css';
+@import './../../../../node_modules/froala-editor/css/froala_style.min.css';
+
+@import './../../../../node_modules/froala-editor/css/plugins/char_counter.min.css';
+@import './../../../../node_modules/froala-editor/css/plugins/table.min.css';
+
+.fr-box {
+  -webkit-user-modify: read-write;
+}
+.fr-element {
+  -webkit-user-modify: read-write;
+}
+a[href="https://www.froala.com/wysiwyg-editor?k=u"] {
+  display: none !important;
+}

@@ -1,0 +1,67 @@
+image:
+  name: registry.ag.digital/php:7.4-ci
+  username: $DOCKER_USERNAME
+  password: $DOCKER_PASSWORD
+
+pipelines:
+  branches:
+      dev:
+        - step:
+            name: Tests
+            caches:
+              - composer
+            services:
+              - db
+            script:
+              - composer self-update --2 --ansi
+              - composer install --ansi
+              - cp .env.pipeline .env
+              - php artisan key:generate
+              - php artisan migrate --seed --ansi
+              - make optimize
+              - ./vendor/bin/phpunit --configuration=./phpunit.xml --testsuite=Unit --exclude-group=no_deploy
+
+        - step:
+            name: Build cmf-frontend
+            image: node:12.18-alpine
+            caches:
+              - node
+            artifacts:
+              - public/cmf/js/**
+              - public/cmf/css/**
+              - public/cmf/img/**
+              - public/cmf/images/**
+              - public/cmf/fonts/**
+              - public/cmf/mix-manifest.json
+            script:
+              - npm config set unsafe-perm=true
+              - npm i
+              - npm run cmf-prod
+
+        - step:
+            name: Deploy to Stage
+            caches:
+              - composer
+            services:
+              - db
+            script:
+              - composer self-update --2 --ansi
+              - composer install --ansi
+              - cp .env.pipeline .env
+              - php artisan key:generate
+              - php artisan migrate --env=documentation --ansi
+              - php artisan db:seed --env=documentation --class=DocumentationDatabaseSeeder --ansi
+              - make scribe-fresh
+              - php artisan version:git
+
+
+definitions:
+  services:
+    db:
+      image: mysql:8.0
+      environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: default
+        MYSQL_USER: default
+        MYSQL_PASSWORD: secret
+      command: --default-authentication-plugin=mysql_native_password

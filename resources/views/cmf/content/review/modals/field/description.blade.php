@@ -1,0 +1,3 @@
+<div>
+    {{ $oItem->description }}
+</div>

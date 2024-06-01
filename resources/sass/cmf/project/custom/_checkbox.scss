@@ -1,0 +1,28 @@
+
+
+.abc-checkbox label::before {
+  border-radius: 0;
+}
+
+.abc-checkbox input[type="checkbox"]:focus + label::before, .abc-checkbox input[type="radio"]:focus + label::before {
+  outline: none;
+  border-color: #8ad4ee;
+}
+
+.abc-checkbox .styled.is-danger + label::before {
+  border-color: $brand-danger;
+}
+
+
+.abc-radio label::before {
+    //border-radius: 0;
+}
+
+.abc-radio input[type="checkbox"]:focus + label::before, .abc-radio input[type="radio"]:focus + label::before {
+    outline: none;
+    border-color: #8ad4ee;
+}
+
+.abc-radio .styled.is-danger + label::before {
+    border-color: $brand-danger;
+}

@@ -1,0 +1,78 @@
+
+.markdown-container {
+    width: 100%;
+    margin-top: 5px;
+
+    .markdown-preview {
+        padding: 0.5rem 0.75rem;
+
+        pre {
+            margin: 0;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .markdown-columns-toggler {
+        margin-bottom: 5px;
+        position: absolute;
+        top: -5px;
+        right: 32px;
+    }
+    .markdown-toggler {
+        margin-bottom: 5px;
+        position: absolute;
+        top: -5px;
+        right: 0;
+    }
+    .markdown-window.is-columns {
+        //width: 763px;
+        //right: 763px;
+        position: fixed;
+        top: 2px;
+        margin-right: 20px;
+        background-color: #fff;
+        overflow: auto;
+        height: 100%;
+        font-size: 16px;
+        width: 680px;
+    }
+}
+
+.markdown-editor-buttons {
+    float: right;
+    //margin-right: 35px;
+    position: relative;
+    top: 0;
+    svg {
+        cursor: pointer;
+        display: inline-block;
+        width: 16px;
+        margin-right: 10px;
+    }
+    &.with-columns {
+        //margin-right: 64px;
+    }
+    .btn-light {
+        width: 30px;
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    .btn-light.active {
+        background-color: $brand-primary;
+        color: #fff;
+    }
+}
+
+.is-row-group {
+    .markdown-toggler {
+        margin-right: 15px;
+    }
+}

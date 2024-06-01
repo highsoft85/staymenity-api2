@@ -1,0 +1,41 @@
+
+/*!
+ * NODE MODULES
+ */
+// Icons
+@import '~font-awesome/css/font-awesome.min.css';
+@import '~simple-line-icons/css/simple-line-icons.css';
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,600');
+// Plugins
+@import '~toastr/build/toastr.css';
+//@import '~summernote/dist/summernote.css';
+//@import '~summernote-webpack-fix/dist/summernote.css';
+//@import '~summernote-webpack-fix/src/less/summernote.scss';
+@import '~bootstrap-select/dist/css/bootstrap-select.css';
+//@import '~codemirror/lib/codemirror.css';
+@import '~tippy.js/dist/tippy.css';
+//@import '~tippy.js/dist/themes/light.css';
+@import "~awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css";
+@import '~huebee/dist/huebee.min.css';
+@import '~jquery-bootstrap-scrolling-tabs/dist/jquery.scrolling-tabs.min.css';
+// Plugins css
+@import './../../common/datepicker/bootstrap-datetimepicker.min.css';
+@import './../../common/fancybox/jquery.fancybox.min.css';
+@import './../../common/fancybox/fancybox.support.css';
+
+/*!
+ * PROJECT
+ */
+@import './../_template';
+@import './../_package';
+@import './../_common';
+@import './../_project';
+
+
+
+
+
+// npm install --save ajax-bootstrap-select autoprefixer awesome-bootstrap-checkbox axios blueimp-file-upload bootstrap bootstrap-select cross-env cssnano font-awesome huebee jquery jquery-fancybox jquery-smooth-scroll lodash markdown-it moment popper.js postcss-font-magician postcss-no-important postcss-remove-root purify-css
+// npm install --save sass sass-loader sass-resources-loader select2 simple-line-icons tether tether-shepherd tippy.js toastr cleave.js jquery-bootstrap-scrolling-tabs css-mqpacker postcss-url
+// npm install --save jquery-ui

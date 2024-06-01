@@ -1,0 +1,90 @@
+
+/* Mockup Slider */
+.mockup-slider {
+  position: relative;
+  &.is-center {
+    width: calc(100% - 12em);
+    margin: 0 0 0 2em;
+    max-width: 600px;
+  }
+  display: none;
+
+  &.mockup-slider--current {
+    animation: square-spin2 .5s 0s cubic-bezier(.09,.57,.49,.9);
+    display: block;
+  }
+  &:before {
+    /*
+    content: '';
+    width: 100%;
+    background: rgba(0,0,0,0.05);
+    height: 100px;
+    position: absolute;
+    top: 0;
+    */
+  }
+  &:after {
+    /*
+    content: '';
+    width: 100%;
+    background: rgba(0,0,0,0.05);
+    height: 100px;
+    position: absolute;
+    top: 0;
+    top: auto;
+    bottom: 0;
+    */
+  }
+  img {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    box-shadow: 0 10px 20px -4px rgba(0,0,0,0.6);
+  }
+  .mockup-slider__title {
+    position: absolute;
+    font-size: 3em;
+    bottom: 30%;
+    left: -0.5em;
+    font-weight: normal;
+    margin: 0;
+  }
+  .mockup-slider__subtitle {
+    position: absolute;
+    top: 70%;
+    left: -1em;
+    margin: 0;
+    font-size: 1.05em;
+    z-index: 50;
+  }
+  article {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    font-size: 1.2rem;
+    &.article--current {
+      display: block;
+    }
+  }
+}
+.mockup-article {
+  display: none;
+  padding: 2rem 0;
+  //color: #fff;
+  &.article--current {
+    display: block;
+    @include animation(opacity .5s);
+  }
+}
+
+
+
+@media screen and ( max-width: 768px ) {
+  .mockup-slider {
+    width: 100%;
+    float: none;
+    margin: auto;
+  }
+}

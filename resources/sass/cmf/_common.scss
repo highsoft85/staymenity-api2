@@ -1,0 +1,21 @@
+
+// Common
+@import './../common/components/mixins';
+@import './../common/components/keyframes';
+
+$primary-color-light: $brand-primary;
+$primary-color-nav: #f39468;
+
+@import './../common/components/loaders/loaders';
+@import './../common/toastr/toastr';
+
+// Icons
+@import './../common/icons/glyphicon';
+@import './../common/components/fullcalendar';
+@import './../common/components/tippy';
+@import './../common/components/drag';
+@import './../common/tabs/tabs-scolling';
+
+:focus {
+    outline: none;
+}
